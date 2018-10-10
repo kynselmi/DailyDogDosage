@@ -17,7 +17,11 @@ export default class App extends React.Component {
         </View>
         <ScrollView>
           <View style={styles.content}>
-            <BreedList style={styles.breedList} rowStyle={styles.breedRow}/>
+            <BreedList 
+              style={styles.breedList}
+              rowStyle={styles.breedRow}
+              separatorStyle={styles.separator}
+            />
           </View>
         </ScrollView>
       </View>
@@ -52,16 +56,19 @@ const styles = StyleSheet.create({
 
   breedRow: {
     fontSize: 24, 
-    borderWidth: 1, 
-    borderRadius: 5, 
     padding: 15, 
-    borderColor: 'grey',
     margin: 1
   },
 
   logo: {
     width: 30,
     height: 30
+  },
+
+  separator: {
+    flex: 1,
+    height: StyleSheet.hairlineWidth,
+    backgroundColor: '#8E8E8E',
   },
 
 });
