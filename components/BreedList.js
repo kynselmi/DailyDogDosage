@@ -1,19 +1,20 @@
 import React from 'react'
 import { FlatList, Text, View, Modal, TouchableHighlight, Alert, Image, StyleSheet } from 'react-native'
 import { DogModal } from './DogModal.js';
+import styles from '../styles/styles.js'
 
 export class BreedList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             breeds: [],
-            modalVisible: false,
-            image: '',
+            modalVisible: false
         }
+
     }
 
-    setModalVisible(visible) {
-        this.setState({ modalVisible: visible });
+    setModalVisible = (isVisible) => {
+        this.setState({ modalVisible: isVisible });
     }
 
     async componentDidMount() {
@@ -45,14 +46,15 @@ export class BreedList extends React.Component {
     }
 
     render() {
+        console.log("State: "+this.state.modalVisible);
         return (
-            <View>
-                <DogModal style={styles.modal} visible={this.state.modalVisible}/>
+            <View style={styles.content}>
+               <DogModal style={styles.modal} modalVisible={this.state.modalVisible} visibilityFunction={this.setModalVisible}/>
                 
                 <FlatList style={this.props.style}
                     data={this.state.breeds}
-                    renderItem={({item, index}) => (
-                        <TouchableHighlight onPress={() => { this.setModalVisible(true); }}>
+                    renderItem={({item}) => (
+                        <TouchableHighlight onPress={() => this.setModalVisible(true) }>
                             <Text style={this.props.rowStyle}>
                                 {item}
                             </Text>

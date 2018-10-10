@@ -17,13 +17,13 @@ export default class App extends React.Component {
           <Text>Daily Dog Dose</Text>
         </View>
         <ScrollView>
-          <View style={styles.content}>
+
             <BreedList 
               style={styles.breedList}
               rowStyle={styles.breedRow}
               separatorStyle={styles.separator}
             />
-          </View>
+
         </ScrollView>
       </View>
     );

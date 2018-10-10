@@ -47,21 +47,14 @@ export default StyleSheet.create({
       height: 300,
       width: 300,
       borderRadius: 10,
-    },
-     image: {
-        height: 200,
-        width: 300,
-    },
-
-    modal: {
-        borderRadius: 10,
-        backgroundColor: 'green',
-        alignItems: 'center',
+      borderRadius: 10,
+      backgroundColor: 'green',
+      alignItems: 'center',
     },
 
     image: {
-        height: 200,
-        width: 300,
+      height: 200,
+      width: 300,
     },
     
     button: {
