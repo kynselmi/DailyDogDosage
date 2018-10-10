@@ -71,4 +71,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#8E8E8E',
   },
 
+  modal: {
+    height: 300,
+    width: 300,
+    borderRadius: 10,
+},
+   image: {
+      height: 200,
+      width: 300,
+    },
+
 });
