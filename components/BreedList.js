@@ -1,5 +1,5 @@
 import React from 'react'
-import { FlatList, Text} from 'react-native'
+import { FlatList, Text, View} from 'react-native'
 
 export class BreedList extends React.Component{
     constructor(props) {
@@ -22,9 +22,11 @@ export class BreedList extends React.Component{
         return (
             <FlatList style={this.props.style}
             data={Object.keys(this.state.breeds)}
-            renderItem={({item}) => (
-                <Text style={this.props.rowStyle}>{this.capitalizeFirstLetter(item)}</Text>
+            renderItem={({item, index}) => (
+                <Text style={this.props.rowStyle}>{this.capitalizeFirstLetter(item)+" "+this.state.breeds[item]}</Text>
                 )}
+            keyExtractor={(item, index) => index.toString()}
+            ItemSeparatorComponent={() => <View style={this.props.separatorStyle} />}
             />
         );
     }
