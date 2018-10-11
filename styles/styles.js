@@ -70,6 +70,11 @@ export default StyleSheet.create({
       borderRadius: 10,
       borderColor: '#d8c3a5',
     },
+
+    randImage: {
+      height: 200,
+      width: 300,
+    },
     
     button: {
         backgroundColor: '#e98074',
@@ -80,6 +85,13 @@ export default StyleSheet.create({
         textAlign: 'center',
         fontSize: 32,
         borderRadius: 10,
-    }
+    },
+
+    randomPic: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+  },
   
   });
