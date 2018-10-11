@@ -20,18 +20,17 @@ export class DogModal extends React.Component {
     render() {
         console.log("Modal visible: "+this.props.modalVisible)
         return (
-             <View style={this.props.modal} visible={this.props.visible}>
+             <View  visible={this.props.visible}>
                     <Modal
-                        style={this.props.style}
                         animationType="slide"
                         transparent={false}
                         visible={this.props.modalVisible}
                         onRequestClose={() => {
                             Alert.alert('Modal has been closed.');
                         }}>
-                        <View style={{ marginTop: 22 }}>
-                            <View>
-                                <Text style={styles.header}>This is your dog of the day</Text>
+
+                        <View style={styles.modal}>
+                                <Text style={styles.headerText}>This is your dog of the day</Text>
                                 <Image
                                     style={styles.image}
                                     source={{
@@ -43,7 +42,7 @@ export class DogModal extends React.Component {
                                     onPress={ () => this.props.visibilityFunction(false) }>
                                     <Text style={styles.button}>Close</Text>
                                 </TouchableHighlight>
-                            </View>
+                            
                         </View>
                     </Modal>
                 </View>

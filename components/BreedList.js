@@ -49,7 +49,7 @@ export class BreedList extends React.Component {
         console.log("State: "+this.state.modalVisible);
         return (
             <View style={styles.content}>
-               <DogModal style={styles.modal} modalVisible={this.state.modalVisible} visibilityFunction={this.setModalVisible}/>
+               <DogModal /* style={styles.modal} */ modalVisible={this.state.modalVisible} visibilityFunction={this.setModalVisible}/>
                 
                 <FlatList style={this.props.style}
                     data={this.state.breeds}

@@ -14,14 +14,14 @@ export default class App extends React.Component {
       <View style={styles.container}> 
         <View style={styles.header}>
           <Image source={logo} style={styles.logo} />
-          <Text>Daily Dog Dose</Text>
+          <Text style={styles.headerText}>Daily Dog Dose</Text>
         </View>
         <ScrollView>
 
             <BreedList 
               style={styles.breedList}
               rowStyle={styles.breedRow}
-              separatorStyle={styles.separator}
+              /* separatorStyle={styles.separator} */
             />
 
         </ScrollView>
