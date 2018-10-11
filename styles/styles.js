@@ -56,6 +56,11 @@ export default StyleSheet.create({
       height: 200,
       width: 300,
     },
+
+    randImage: {
+      height: 200,
+      width: 300,
+    },
     
     button: {
         backgroundColor: 'green',
@@ -66,6 +71,13 @@ export default StyleSheet.create({
         textAlign: 'center',
         fontSize: 32,
         borderRadius: 10,
-    }
+    },
+
+    randomPic: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+  },
   
   });
