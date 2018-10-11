@@ -22,7 +22,7 @@ export default class RandomScreen extends React.Component {
             <View style={styles.container}>
                 <View style={styles.header}>
                     <Image source={logo} style={styles.logo} />
-                    <Text>Random Little Fluff Ball</Text>
+                    <Text style={styles.headerText}>Random Little Fluff Ball</Text>
                 </View>
                 <View style={styles.randomPic}>
                         <Image style={styles.randImage}

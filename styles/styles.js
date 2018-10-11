@@ -72,8 +72,8 @@ export default StyleSheet.create({
     },
 
     randImage: {
-      height: 200,
-      width: 300,
+      height: 400,
+      width: 400
     },
     
     button: {
@@ -88,10 +88,10 @@ export default StyleSheet.create({
     },
 
     randomPic: {
-    flex: 1,
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
+      flex: 1,
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'flex-start',
   },
   
   });
